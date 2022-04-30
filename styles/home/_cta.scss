@@ -1,0 +1,76 @@
+.cta {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  &__headergrid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: $grayscale-100;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5.5vw, 4.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: clamp(1.5rem, 5vw, 2.15rem);
+    font-weight: 500;
+  }
+
+  &__link {
+    background-color: $brand-secondary-400;
+    @include button-size(1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    &:hover {
+      background-color: darken($color: $brand-secondary-400, $amount: 3%);
+    }
+  }
+
+  &__image {
+    display: none;
+  }
+
+  @include media('>=md') {
+    &__headergrid {
+      text-align: left;
+      gap: 1.5rem;
+    }
+
+    &__title {
+      font-size: clamp(1.75rem, 3.25vw, 3rem);
+    }
+
+    &__subtitle {
+      font-size: clamp(1.25rem, 3.25vw, 2rem);
+    }
+
+    &__link {
+      @include button-size(1.15rem);
+    }
+
+    &__link {
+      width: fit-content;
+    }
+
+    &__image {
+      display: block;
+      position: relative;
+    }
+  }
+}

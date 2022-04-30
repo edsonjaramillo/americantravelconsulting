@@ -1,0 +1,43 @@
+.featureddestinationsgrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+
+  @include media('>=md') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.featureddestination {
+  $margin-corners: 1.15rem;
+  position: relative;
+  aspect-ratio: 2/1;
+
+  &__name {
+    position: absolute;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    top: 0;
+    left: 0;
+    margin: $margin-corners 0 0 $margin-corners;
+    color: $grayscale-100;
+    font-weight: 600;
+    line-height: 0.65;
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 $margin-corners $margin-corners 0;
+    background-color: $brand-secondary-400;
+    @include button-size(0.9rem);
+    border-radius: $border-radius;
+    color: $grayscale-100;
+    font-weight: 600;
+
+    &:hover {
+      background-color: darken($color: $brand-secondary-400, $amount: 3%);
+    }
+  }
+}

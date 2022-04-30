@@ -1,0 +1,60 @@
+.employeesgrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.employee {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  @include media('>=md') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 3/4;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__name {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: 600;
+    color: $brand-primary;
+  }
+
+  &__contactgroup {
+    display: flex;
+    gap: 0.5rem;
+    width: fit-content;
+  }
+
+  &__emailicon {
+    $email-icon-size: 1.5rem;
+    height: $email-icon-size;
+    width: $email-icon-size;
+    fill: $brand-secondary-400;
+  }
+
+  &__emailme {
+    margin: auto 0;
+    font-weight: 500;
+    color: $brand-secondary-400;
+  }
+
+  &__biography,
+  &__quote {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  &__quote {
+    font-style: italic;
+  }
+}

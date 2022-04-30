@@ -1,0 +1,25 @@
+@import './global/colors';
+@import './global/breakpoints';
+@import './global/appearances';
+@import './global/reset';
+@import './global/responsive';
+
+@import './shared/navbar';
+@import './shared/footer';
+@import './shared/section';
+@import './shared/legal';
+@import './shared/sitemap';
+@import './shared/blurimage';
+
+@import './home/cta';
+@import './home/featured_destination';
+@import './home/testimonial';
+
+@import './destinations/destinationcard';
+@import './destinations/destination';
+
+@import './payment/payment';
+
+@import './about/employee';
+
+@import './contact/form';

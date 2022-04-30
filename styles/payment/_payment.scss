@@ -1,0 +1,24 @@
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 0.25rem;
+  text-align: center;
+  // margin-top: 1rem;
+
+  &--center {
+    min-height: 70vh;
+  }
+
+  &__header {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: #2fbd7c;
+  }
+
+  &__subheader {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: $grayscale-600;
+  }
+}

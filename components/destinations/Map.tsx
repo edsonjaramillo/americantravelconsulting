@@ -74,7 +74,7 @@ const MapBox = ({ initial, mapitems }: MapboxProps) => {
         link={item.link}
       />
     ));
-  }, [mapitems]);
+  }, [mapitems, CustomMarker]);
 
   return (
     <ReactMapGL

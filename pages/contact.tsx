@@ -11,7 +11,7 @@ const ContactPage: NextPage = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm();
 
   const onSubmit = async (data: any) => {
@@ -24,35 +24,32 @@ const ContactPage: NextPage = () => {
       email: data.email,
       phone: formatPhoneNumber(data.phone),
       choice: data.choice,
-      message: data.message
+      message: data.message,
     };
+    const { status } = await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+      templateParameters,
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
+    );
 
-    console.table(templateParameters);
-
-    // const { status } = await emailjs.send(
-    //   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-    //   process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
-    //   templateParameters,
-    //   process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
-    // );
-
-    // if (status == 200) {
-    //   toastNotification(
-    //     ToastType.SUCCESS,
-    //     `Thank you ${name} for your message. We will get back to you as soon as possible.`,
-    //     5000
-    //   );
-    //   reset();
-    // } else {
-    //   toastNotification(ToastType.ERROR, 'Error occured. Try again.');
-    // }
+    if (status == 200) {
+      toastNotification(
+        ToastType.SUCCESS,
+        `Thank you ${name} for your message. We will get back to you as soon as possible.`,
+        5000
+      );
+      reset();
+    } else {
+      toastNotification(ToastType.ERROR, 'Error occured. Try again.');
+    }
   };
 
   return (
     <>
       <HeadOpenGraph
         title='Contact Us'
-        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis!'
+        description='Contact us for any questions, inquiries, or to get a quote.'
         image='https://via.placeholder.com/1200x630'
         alt='Alt'
       />
@@ -68,7 +65,9 @@ const ContactPage: NextPage = () => {
 
       <form
         className='form'
-        onSubmit={handleSubmit(onSubmit, () => toastNotification(ToastType.ERROR, 'Check input requirements.'))}>
+        onSubmit={handleSubmit(onSubmit, () =>
+          toastNotification(ToastType.ERROR, 'Check input requirements.')
+        )}>
         <div className='form__grid responsive-width-contact'>
           <FormGroupLabel name='name' label='Name' errors={errors.name}>
             <CustomInput
@@ -79,7 +78,10 @@ const ContactPage: NextPage = () => {
               req={{ required: { value: true, message: 'Required' } }}
             />
           </FormGroupLabel>
-          <FormGroupLabel name='organization' label='Organization' errors={errors.organization}>
+          <FormGroupLabel
+            name='organization'
+            label='Organization'
+            errors={errors.organization}>
             <CustomInput
               type='text'
               name='organization'
@@ -107,8 +109,8 @@ const ContactPage: NextPage = () => {
                 required: { value: true, message: 'Required' },
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: 'Invalid email address'
-                }
+                  message: 'Invalid email address',
+                },
               }}
             />
           </FormGroupLabel>
@@ -122,10 +124,10 @@ const ContactPage: NextPage = () => {
                 required: { value: true, message: 'Required' },
                 pattern: {
                   value: /^[0-9]+$/,
-                  message: 'Must be 10 digit numbers'
+                  message: 'Must be 10 digit numbers',
                 },
                 minLength: { value: 10, message: 'Must be 10 digits' },
-                maxLength: { value: 10, message: 'Must be 10 digits' }
+                maxLength: { value: 10, message: 'Must be 10 digits' },
               }}
             />
           </FormGroupLabel>

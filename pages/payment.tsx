@@ -2,14 +2,14 @@ import { toastNotification, ToastType } from '@/lib/toastNotification';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
-import { CustomInput, FormGroupLabel } from '../components';
+import { CustomInput, FormGroupLabel, HeadOpenGraph } from '@/components/index';
 
 const PaymentPage: NextPage = () => {
   const router = useRouter();
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm();
 
   const onSubmit = (data: any) => {
@@ -19,14 +19,23 @@ const PaymentPage: NextPage = () => {
 
   return (
     <>
+      <HeadOpenGraph
+        title="American Travel Consulting's payment portal powered by GroupCollect"
+        description='Payment Portal powered by GroupCollect. Enter your school code to get transferred to your designated GroupCollect page.'
+        image='https://res.cloudinary.com/dzfqnxwvf/image/upload/v1598424852/destinations/destinations-hero.jpg'
+        alt='Destinations'
+      />
       <div className='payment payment--center responsive-width-contact'>
         <h1 className='payment__header'>GroupCollect Payment Portal</h1>
         <span className='payment__subheader'>
-          Enter your school code below and you will be transfered to your GroupCollect payment page.
+          Enter your school code below and you will be transfered to your GroupCollect payment
+          page.
         </span>
         <form
           className='form'
-          onSubmit={handleSubmit(onSubmit, () => toastNotification(ToastType.ERROR, 'Check input requirements.'))}>
+          onSubmit={handleSubmit(onSubmit, () =>
+            toastNotification(ToastType.ERROR, 'Check input requirements.')
+          )}>
           <div className='form__grid'>
             <FormGroupLabel name='schoolcode' label='School Code' errors={errors.schoolcode}>
               <CustomInput

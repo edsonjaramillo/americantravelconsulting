@@ -13,7 +13,7 @@ const Destination = (destination: DestinationType) => (
         quality={35}
       />
     </div>
-    <h3 className='destinationcard__name'>{destination.name}</h3>
+    <h2 className='destinationcard__name'>{destination.name}</h2>
     <p className='destinationcard__description'>{destination.description}</p>
     <Link href={`/destinations/${destination.slug}`}>
       <a className='destinationcard__link'>View Details</a>

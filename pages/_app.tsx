@@ -11,10 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       <main id='main-content'>
         <Component {...pageProps} />
+        <AgreementToast />
       </main>
       <Footer />
       <ToastContainer theme='colored' closeOnClick pauseOnHover draggable={false} />
-      <AgreementToast />
     </>
   );
 }

@@ -35,6 +35,7 @@ interface SectionProps {
   textcolor?: TextColors;
   color?: BackgroundColors;
   width?: string;
+  h1?: boolean;
   children: any;
 }
 
@@ -45,12 +46,17 @@ const Section = ({
   textcolor = 'section--text--grayscale-900',
   width = 'responsive-width',
   color = 'section--bg--grayscale-100',
+  h1 = false,
 }: SectionProps) => {
   return (
     <>
       <section className={`section ${color}`} id={id}>
         <div className={`section__content ${width}`}>
-          {header && <h2 className={`section__header ${textcolor}`}>{header}</h2>}
+          {header && h1 ? (
+            <h1 className={`section__header ${textcolor}`}>{header}</h1>
+          ) : (
+            <h2 className={`section__header ${textcolor}`}>{header}</h2>
+          )}
           {children}
         </div>
       </section>

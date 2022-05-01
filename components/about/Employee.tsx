@@ -13,7 +13,7 @@ const Employee = (employee: EmployeeType) => (
       />
     </div>
     <div className='employee__information'>
-      <h3 className='employee__name'>{employee.name}</h3>
+      <h2 className='employee__name'>{employee.name}</h2>
       <a
         href={`mailto:${employee.email}`}
         className='employee__contactgroup'

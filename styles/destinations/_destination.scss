@@ -18,7 +18,10 @@
 
   &__imagegrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    @include media('>sm+') {
+      grid-template-columns: repeat(2, 1fr);
+    }
     gap: 1rem;
   }
 
@@ -65,20 +68,19 @@
   &__information {
     position: absolute;
     min-width: 5ch;
-    height: 5rem;
     background-color: rgba($color: $brand-primary, $alpha: 0.5);
     top: 0;
     left: 0;
-    border-radius: 0 0 3rem 0;
+    border-radius: 0 0 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.6rem;
-    padding: 2rem;
+    gap: 1rem;
+    padding: clamp(1rem, 2.5vw, 1.15rem) clamp(1rem, 2.5vw, 1.15rem);
   }
 
   &__place--name {
-    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
     color: $grayscale-100;
     font-weight: 600;
   }
@@ -86,9 +88,12 @@
   &__place--site {
     color: $grayscale-100;
     background-color: $brand-secondary-400;
-    @include button-size(0.75rem);
+    @include button-size(0.65rem);
     font-weight: 600;
     border-radius: $border-radius;
+    @include media('>sm+') {
+      @include button-size(0.85rem);
+    }
   }
 
   @include media('>=md') {

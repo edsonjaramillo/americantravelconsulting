@@ -26,7 +26,10 @@ const PaymentPage: NextPage = () => {
         alt='American Travel Consulting Logo'
       />
       <div className='payment payment--center responsive-width-contact'>
-        <h1 className='payment__header'>GroupCollect Payment Portal</h1>
+        <h1 className='payment__header'>
+          GroupCollect <br />
+          Payment Portal
+        </h1>
         <span className='payment__subheader'>
           Enter your school code below and you will be transfered to your GroupCollect payment
           page.

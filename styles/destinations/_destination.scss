@@ -94,6 +94,7 @@
     @include media('>sm+') {
       @include button-size(0.85rem);
     }
+    min-width: 4.85rem;
   }
 
   @include media('>=md') {

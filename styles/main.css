@@ -164,7 +164,7 @@ hr {
 .navbar__spacer {
   height: 4rem;
   width: 100%;
-  background-color: red;
+  background-color: #ffffff;
 }
 @media (min-width: 768px) {
   .navbar__hamburger, .navbar__exit {

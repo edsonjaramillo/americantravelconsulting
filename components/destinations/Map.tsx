@@ -1,5 +1,5 @@
 import ReactMapGL, { Marker } from 'react-map-gl';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { MapboxProps, MarkerProps } from '@/components/destinations/MapboxTypes';
 import { SelectedMarkerProps, ViewportProps } from '@/components/destinations/MapboxTypes';
 
@@ -74,7 +74,7 @@ const MapBox = ({ initial, mapitems }: MapboxProps) => {
         link={item.link}
       />
     ));
-  }, [mapitems, CustomMarker]);
+  }, [mapitems]);
 
   return (
     <ReactMapGL

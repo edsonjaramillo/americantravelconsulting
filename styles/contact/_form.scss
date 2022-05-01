@@ -117,8 +117,9 @@
     color: $grayscale-700;
 
     &:focus {
+      outline: none;
       background-color: lighten($color: $state-info, $amount: 32%);
-      outline: 2px solid $brand-secondary-400;
+      border: 2px solid $brand-secondary-400;
     }
   }
 

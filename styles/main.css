@@ -968,8 +968,9 @@ hr {
   color: #404040;
 }
 .form__input:focus {
+  outline: none;
   background-color: #bfdef4;
-  outline: 2px solid #ff7f00;
+  border: 2px solid #ff7f00;
 }
 .form--textarea {
   resize: vertical;

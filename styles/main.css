@@ -711,8 +711,13 @@ hr {
 }
 .destination__imagegrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
+}
+@media (min-width: 625px) {
+  .destination__imagegrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .destination__image {
   position: relative;
@@ -749,29 +754,34 @@ hr {
 .destination__information {
   position: absolute;
   min-width: 5ch;
-  height: 5rem;
   background-color: rgba(30, 58, 138, 0.5);
   top: 0;
   left: 0;
-  border-radius: 0 0 3rem 0;
+  border-radius: 0 0 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: clamp(1rem, 2.5vw, 1.15rem) clamp(1rem, 2.5vw, 1.15rem);
 }
 .destination__place--name {
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
   color: #ffffff;
   font-weight: 600;
 }
 .destination__place--site {
   color: #ffffff;
   background-color: #ff7f00;
-  padding: 0.6rem 1.125rem;
-  font-size: 0.75rem;
+  padding: 0.52rem 0.975rem;
+  font-size: 0.65rem;
   font-weight: 600;
   border-radius: 0.6rem;
+}
+@media (min-width: 625px) {
+  .destination__place--site {
+    padding: 0.68rem 1.275rem;
+    font-size: 0.85rem;
+  }
 }
 @media (min-width: 768px) {
   .destination__attractions {
@@ -959,6 +969,7 @@ hr {
 }
 .form__input:focus {
   background-color: #bfdef4;
+  outline: 2px solid #ff7f00;
 }
 .form--textarea {
   resize: vertical;

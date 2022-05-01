@@ -50,8 +50,8 @@ const ContactPage: NextPage = () => {
       <HeadOpenGraph
         title='Contact Us'
         description='Contact us for any questions, inquiries, or to get a quote.'
-        image='https://via.placeholder.com/1200x630'
-        alt='Alt'
+        image='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
+        alt='American Travel Consulting Logo'
       />
 
       <div className='contact responsive-width-contact'>

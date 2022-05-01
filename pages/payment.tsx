@@ -22,8 +22,8 @@ const PaymentPage: NextPage = () => {
       <HeadOpenGraph
         title="American Travel Consulting's payment portal powered by GroupCollect"
         description='Payment Portal powered by GroupCollect. Enter your school code to get transferred to your designated GroupCollect page.'
-        image='https://res.cloudinary.com/dzfqnxwvf/image/upload/v1598424852/destinations/destinations-hero.jpg'
-        alt='Destinations'
+        image='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
+        alt='American Travel Consulting Logo'
       />
       <div className='payment payment--center responsive-width-contact'>
         <h1 className='payment__header'>GroupCollect Payment Portal</h1>

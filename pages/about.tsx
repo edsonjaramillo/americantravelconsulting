@@ -12,10 +12,10 @@ const AboutPage = ({ employees }: AboutPageProps) => {
       <HeadOpenGraph
         title='About Us'
         description='Meet our team of experts who are passionate about helping you plan and excecute your school trip.'
-        image='https://res.cloudinary.com/dzfqnxwvf/image/upload/v1598424852/destinations/destinations-hero.jpg'
-        alt='Destinations'
+        image='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
+        alt='American Travel Consulting Logo'
       />
-      <Section header='Meet our Team' width='responsive-width-about'>
+      <Section header='Meet our Team' width='responsive-width-about' h1>
         <div className='employeesgrid'>
           {employees.map((employee) => (
             <Employee key={employee.id} {...employee} />

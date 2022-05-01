@@ -6,10 +6,9 @@ const PrivacyPage: NextPage = () => {
     <>
       <HeadOpenGraph
         title='Privacy Policy'
-        description='fbjhsdbfjbsdgfdgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdf'
-        image='https://via.placeholder.com/1200x630'
-        alt='Alt'
-        robots='noindex, nofollow'
+        description='Read the most recent American Travel Consulting privacy policy here.'
+        image='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
+        alt='American Travel Consulting Logo'
       />
       <PrivacyPolicy
         name='American Travel Consulting'

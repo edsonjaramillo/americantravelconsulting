@@ -11,8 +11,8 @@ const DestinationsPage = ({ destinations }: DestinationsPageProps) => (
     <HeadOpenGraph
       title='Destinations'
       description='Explore the best destinations for your school trip around the best cities in the United States of America.'
-      image='https://res.cloudinary.com/dzfqnxwvf/image/upload/v1598424852/destinations/destinations-hero.jpg'
-      alt='Destinations'
+      image='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
+      alt='American Travel Consulting Logo'
     />
     <Section header='Destinations' h1>
       <div className='destinationscardgrid'>

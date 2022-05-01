@@ -241,6 +241,7 @@ hr {
   justify-content: center;
   color: #ffffff;
   font-size: 0.9rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .footer__linksgrid {

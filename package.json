@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap --config next-sitemap-config.js",
+    "format": "prettier --write .",
     "sass": "sass --watch --error-css --no-source-map styles/main.scss styles/main.css"
   },
   "dependencies": {

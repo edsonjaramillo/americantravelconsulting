@@ -13,9 +13,8 @@
 }
 
 .responsive-width-about {
-  width: 90%;
   margin: auto;
-  max-width: 34 * 2rem;
+  width: min(90%, 60ch);
 }
 
 .responsive-width-footer {

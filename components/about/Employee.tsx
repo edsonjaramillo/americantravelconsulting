@@ -3,7 +3,7 @@ import { BlurImage } from '@/components/index';
 
 const Employee = (employee: EmployeeType) => (
   <article className='employee'>
-    <div className='employee__image'>
+    {/* <div className='employee__image'>
       <BlurImage
         src='https://via.placeholder.com/900x1200'
         alt={`${employee.name}'s photo`}
@@ -11,7 +11,7 @@ const Employee = (employee: EmployeeType) => (
         layout='fill'
         objectFit='cover'
       />
-    </div>
+    </div> */}
     <div className='employee__information'>
       <h2 className='employee__name'>{employee.name}</h2>
       <a

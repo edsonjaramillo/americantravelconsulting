@@ -77,9 +77,8 @@ hr {
 }
 
 .responsive-width-about {
-  width: 90%;
   margin: auto;
-  max-width: 68rem;
+  width: min(90%, 60ch);
 }
 
 .responsive-width-footer {
@@ -821,12 +820,6 @@ hr {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
-}
-@media (min-width: 768px) {
-  .employee {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
 }
 .employee__image {
   position: relative;

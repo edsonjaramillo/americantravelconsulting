@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+American Travel Consulting
+==========================
 
-## Getting Started
+American Travel Consulting is the leading student group travel provider. They specialize in creating custom itineraries for groups of all sizes and ages, making sure your students have the trip of a lifetime. With over 15 years of experience, they know how to create an unforgettable adventure that meets their specific needs!
 
-First, run the development server:
+Links
+-----
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+**Github Repo:**  [Link](https://github.com/edsonjaramillo/americantravelconsulting)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Website:**  [Link](https://americantravelconsulting.com/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Techstack
+---------
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1.  React
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+2.  Next.js
 
-## Learn More
+3.  TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+4.  GraphQL
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5.  GraphCMS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+6.  Sass
 
-## Deploy on Vercel
+7.  Node.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+8.  Webpack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+9.  Vercel
+
+Lighthouse Scores
+-----------------
+
+-   **Performance**: 100
+
+    1.  First Contentful Paint: 0.5s
+
+    2.  Speed Index: 1.1s
+
+    3.  Largest Contentful Paint: 0.5s
+
+    4.  Time to Interactive: 1.3s
+
+    5.  Total Blocking Time: 410ms
+
+    6.  Cumulative Layout Shift: 0.008
+
+-   **Accessibility**: 100
+
+-   **Best Practices**: 100
+
+-   **SEO**: 100

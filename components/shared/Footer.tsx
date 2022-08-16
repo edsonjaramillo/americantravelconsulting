@@ -48,7 +48,7 @@ const Footer = () => (
         </FooterSection>
       </div>
       <div className='footer__syta'>
-        <Image src={SYTA} alt='SYTA' />
+        <Image src={SYTA} alt='SYTA' quality={50} />
       </div>
       <div className='footer__socialgrid'>
         <FacebookIcon />

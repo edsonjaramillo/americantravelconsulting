@@ -242,6 +242,10 @@ hr {
   font-size: 0.9rem;
   text-align: center;
 }
+.footer__syta {
+  max-width: 13rem;
+  margin: 1rem auto;
+}
 @media (min-width: 768px) {
   .footer__linksgrid {
     display: flex;

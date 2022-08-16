@@ -63,6 +63,11 @@
     text-align: center;
   }
 
+  &__syta {
+    max-width: 13rem;
+    margin: 1rem auto;
+  }
+
   @include media('>=md') {
     &__linksgrid {
       display: flex;

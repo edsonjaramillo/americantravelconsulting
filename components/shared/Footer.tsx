@@ -47,13 +47,9 @@ const Footer = () => (
           <FooterLink slug='/sitemap' name='Sitemap' />
         </FooterSection>
       </div>
-      <a
-        href='https://syta.org'
-        rel='noopener nofollow noreferrer external'
-        target='_blank'
-        className='footer__syta'>
+      <div className='footer__syta'>
         <Image src={SYTA} alt='SYTA' />
-      </a>
+      </div>
       <div className='footer__socialgrid'>
         <FacebookIcon />
         <InstagramIcon />
